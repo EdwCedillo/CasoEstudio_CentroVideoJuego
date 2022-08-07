@@ -35,6 +35,9 @@ public class Empleado extends Persona{//la clase Empleado hereda de la clase Per
         this.cargo = cargo;
     }
     
-    
+    public void mostrarDatoPantalla(){
+        System.out.println(" ***Datos Empleado***");
+        System.out.println("Nombre: " + getNombre()+ " Apellido: " + getApellido() + " Cargo: "+ getCargo() );
+    }
             
 }

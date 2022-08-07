@@ -20,7 +20,7 @@ public class Juego {
         this.idJuego = idJuego;
         this.nombreJuego = nombreJuego;
         //partida = new ArrayList(); //instanciamos la coleccion de partida
-        partida = new PartidaDelJuego(1,numParticipantes, 5);//Instanciamos la partida dentro del constructor de la clase Juego, predefinimos el tiempo
+        partida = new PartidaDelJuego(1,numParticipantes, 5,participantes);//Instanciamos la partida dentro del constructor de la clase Juego, predefinimos el tiempo
         
     }
     
@@ -49,7 +49,12 @@ public class Juego {
         this.partida = partida;
     }
     
-    
+    public void mostrarDatoPantalla(int numParticipantes,ArrayList<Jugador> participantes ){
+        System.out.println(" ***Datos Juego***");
+        System.out.println(" Codigo Juego: "+ getIdJuego() + " Nombre del Juego: " + getNombreJuego() );
+        
+    }
+        
   
     
 }

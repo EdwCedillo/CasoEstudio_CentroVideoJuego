@@ -35,5 +35,9 @@ public class Jugador extends Persona {//Clase Jugador hera de la clase persona
         this.nickName = nickName;
     }
     
-    
+    public void mostrarDatoPantalla(){
+        System.out.println(" ***Datos Jugador***");
+        System.out.println("Nombre: " + getNombre()+ " Apellido: " + getApellido() + " NickName: "+ getNickName());
+    }
+        
 }

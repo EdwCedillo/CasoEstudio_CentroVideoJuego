@@ -28,6 +28,8 @@ public class PartidaDelJuego {
         this.numJugador = numJugador;
         this.tiempoPartida = tiempoPartida;
         listaPuntaje = new ArrayList();
+        //resultadoPartida(numPartida, participantes);//Empieza la partida, los resultados del juego
+        //mostrarResultadoPartida();
     }
     
     /* Metodos*/
@@ -56,7 +58,7 @@ public class PartidaDelJuego {
     }
     
     
-    public void resultadoPartida(int numPartida, ArrayList<Jugador> participantes, ArrayList<RegistroPuntaje> listaPuntaje){
+    public void resultadoPartida(int numPartida, ArrayList<Jugador> participantes){
         RegistroPuntaje puntos;
         /* Llenado de Datos del Registro de Puntaje*/
         for(int i=0; i<participantes.size(); i++){
@@ -64,6 +66,15 @@ public class PartidaDelJuego {
             int numero = (int)(Math.random()*(1-100+1)+100);
             puntos=new RegistroPuntaje(this, participantes.get(i), numero);//Instancia de la clase Registro de Puntaje, cada iteracion es un nuevo objeto de registro puntaje
             listaPuntaje.add(puntos);//Los guarda en la colleccion de Objeto 
+        }
+    }
+    public void mostrarResultadoPartida(){
+        for(int i=0; i<listaPuntaje.size(); i++){
+            //Revisar el trabajo falta
+            
+            System.out.println("Lista de Resultados de la Partida");
+            System.out.println("Numero de Partida: "+ listaPuntaje.get(i).getPartida().getNumPartida());
+            System.out.println("Jugador: "+ listaPuntaje.get(i).getParticipante().getNickName()+ " Puntaje: "+listaPuntaje.get(i).getPuntaje());
         }
     }
 }
